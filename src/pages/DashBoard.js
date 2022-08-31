@@ -20,7 +20,7 @@ const DashBoard = () => {
         <NavLink to="/about">
           {" "}
           <li>
-            <a className="active" href="">
+            <a className="active" href="/">
               About{" "}
               <img
                 className="icon"
@@ -45,7 +45,7 @@ const DashBoard = () => {
         <NavLink to="/image">
           {" "}
           <li>
-            <a className="active" href="">
+            <a className="active" href="/">
               Images{" "}
               <img
               alt=""
@@ -58,9 +58,10 @@ const DashBoard = () => {
         <NavLink to="/history">
           {" "}
           <li>
-            <a className="active" href="">
+            <a className="active" href="/">
               History{" "}
               <img
+              alt=""
                 className="icon"
                 src="https://img.icons8.com/ios/344/historical.png"
               />

@@ -8,7 +8,9 @@ const Profile = () => {
   let { username } = useParams();
   const [user, setUser] = useState("");
   const [work, setWork] = useState("");
-  useEffect(() => handlerProfile(work), []);
+  useEffect(() => handlerProfile(work)
+  // eslint-disable-next-line
+  ,[]);
 
   const handlerProfile = () => {
     profileApi(username)
@@ -28,7 +30,7 @@ const Profile = () => {
     <>
       <div className="header">
         <div className="profile-image">
-          <img src={user.profile_image?.large}></img>
+          <img src={user.profile_image?.large} alt={''}></img>
         </div>
       </div>
 
@@ -39,29 +41,29 @@ const Profile = () => {
         <p>Bio: {user.bio}</p>
       </div>
       <div className="list">
-        <a className="work"> {work}</a>
+        <a className="work" href="/"> {work}</a>
         <a className="support" href="https://www.paypal.com/">
           {" "}
           Support via PayPal
         </a>
-        <a> Locattion: {user.location}</a>
-        <a> Instagram: {user.instagram_username}</a>
+        <a href="/"> Locattion: {user.location}</a>
+        <a href="/"> Instagram: {user.instagram_username}</a>
       </div>
       <div>
         <h1>Interest</h1>
       </div>
       <div className="interest">
         <div className="ilist">
-          <a> mountain</a>
+          <a href="/"> mountain</a>
         </div>
         <div className="ilist">
-          <a> animal</a>
+          <a href="/"> animal</a>
         </div>
         <div className="ilist">
-          <a> forest</a>
+          <a href="/"> forest</a>
         </div>
         <div className="ilist">
-          <a>outdoor</a>
+          <a href="/">outdoor</a>
         </div>
       </div>
       <div>
@@ -70,7 +72,7 @@ const Profile = () => {
       <div className="related">
         {user.photos?.map((item, index) => (
           <div key={index}>
-            <img src={item.urls.full}></img>
+            <img src={item.urls.full} alt={""}></img>
           </div>
         ))}
       </div>

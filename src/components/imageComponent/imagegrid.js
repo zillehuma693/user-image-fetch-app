@@ -7,7 +7,7 @@ const Grid = ({ images }) => {
         {images.map((image, index) => (
           <div className="box" key={index}>
             <div className="boxInner" id="img-root">
-            <img src={image.urls.small} />
+            <img src={image.urls.small} alt={""}/>
             </div>
           </div>
         ))}

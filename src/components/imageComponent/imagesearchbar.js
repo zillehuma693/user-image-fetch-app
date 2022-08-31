@@ -17,7 +17,9 @@ function Search(props) {
   let index;
   useEffect(() => {
     reduxSetValue();
-  }, [id]);
+  }
+  // eslint-disable-next-line
+  , [id]);
 
   const reduxSetValue = () => {
     for (let i = 0; i <= image.length; i++) {

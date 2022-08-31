@@ -13,7 +13,7 @@ const Grid = ({ images }) => {
           <div className="user-box" key={index}>
             <div className="card" onClick={() => goToProfile(image.username)}>
               <div className="image">
-                <img src={image.profile_image.large} />
+                <img src={image.profile_image.large} alt={""}/>
               </div>
               <div className="container">
                 <h4>
